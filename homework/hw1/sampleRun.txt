@@ -1,0 +1,50 @@
+prompt> ./a.out
+How many minutes to spend? 280 
+Enter task type identifiers and durations in minutes,
+one per line; enter '0 0' to stop
+i 10
+m 30
+p 45
+c 75
+0 0
+Enter a command [a, r, s, q]: s
+Identifier,Duration,Count,Total Time
+i,10,0,0
+m,30,0,0
+p,45,0,0
+c,75,0,0
+Total time in jar: 0:00 out of: 4:40 possible
+Enter a command [a, r, s, q]: a i 10
+Enter a command [a, r, s, q]: a p 2
+Enter a command [a, r, s, q]: s
+Identifier,Duration,Count,Total Time
+i,10,10,100
+m,30,0,0
+p,45,2,90
+c,75,0,0
+Total time in jar: 3:10 out of: 4:40 possible
+Enter a command [a, r, s, q]: r i 20
+Invalid command
+Enter a command [a, r, s, q]: r i 5
+Enter a command [a, r, s, q]: a c 3
+Invalid command
+Enter a command [a, r, s, q]: s
+Identifier,Duration,Count,Total Time
+i,10,5,50
+m,30,0,0
+p,45,2,90
+c,75,0,0
+Total time in jar: 2:20 out of: 4:40 possible
+Enter a command [a, r, s, q]: a c 1
+Enter a command [a, r, s, q]: a c 1
+Invalid command
+Enter a command [a, r, s, q]: s
+Identifier,Duration,Count,Total Time
+i,10,5,50
+m,30,0,0
+p,45,2,90
+c,75,1,75
+Total time in jar: 3:35 out of: 4:40 possible
+Enter a command [a, r, s, q]: q
+Bye!
+prompt>
