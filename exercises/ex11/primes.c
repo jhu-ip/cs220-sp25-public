@@ -29,7 +29,7 @@ int is_prime(int number) {
     return 1;
 }
 
-int set_primes( int *list , int capacity )
+int set_primes( int **list , int capacity )
 {
     int idx = 0; // index of the next prime to add
     for( int n=2 ; n<MAX_CANDIDATE ; n++ )
@@ -41,9 +41,9 @@ int set_primes( int *list , int capacity )
             {
                 // double the # ints "list" can hold
                 capacity *= 2;
-                list = realloc(list, capacity * sizeof(int));
+                *list = realloc(*list, capacity * sizeof(int));
             }
-            list[idx++] = n;
+            (*list)[idx++] = n;
         }
     }
     return idx;
@@ -59,7 +59,7 @@ int main() {
         printf("Could not allocate list\n");
         return 1;
     }
-    int prime_count = set_primes( list , capacity );
+    int prime_count = set_primes( &list , capacity );
     printf( "Found %d primes in the range [2,%d)\n" , prime_count , MAX_CANDIDATE );
     printf( "First and last primes are %d and %d\n" , list[0] , list[ prime_count-1 ] );
     free(list);
