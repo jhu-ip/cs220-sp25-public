@@ -16,6 +16,9 @@ int main(void) {
     printf("Could not read the seed number and max range - quitting\n");
     return 1;
   }
+
+  // TODO (1): add statement to call set_seed using user's seed value
+
   if (max_range > 30) {
     printf("invalid range max - quitting\n");
     return 1;
@@ -29,9 +32,9 @@ int main(void) {
   // Experiment 1: generate 500 pseudo-random numbers in the range
   // 0..max_range-1 by repeatedly calling the gen_uniform() function
   // and incrementing the element of the hist array whose index is
-  // equal to the returned value. 
+  // equal to the returned value.
 
-  // TODO (3): generate 500 uniformly distributed pseudo-random values
+  // TODO (4): generate 500 uniformly distributed pseudo-random values
 
 
   printf("Uniform distribution:\n");
@@ -43,11 +46,11 @@ int main(void) {
   // Experiment 2: generate 500 pseudo-random numbers in the range
   // 0..max_range-1 by repeatedly calling the normal_rand() function
   // and incrementing the element of the hist array whose index is
-  // equal to the returned value. 
+  // equal to the returned value.
 
-  // TODO (5): generate 500 normally distributed pseudo-random values
+  // TODO (6): generate 500 normally distributed pseudo-random values
 
-  
+
   printf("Normal distribution:\n");
   print_hist(hist, max_range);
 
@@ -64,14 +67,14 @@ void print_hist(int counts[], int max) {
 
 // This function sets the seed of the random generation by calling srand()
 void set_seed(int seed) {
-  // TODO (1): WRITE IMPLEMENTATION
+  // TODO (2): WRITE IMPLEMENTATION
 }
 
 // This function generates a random integer between 0 (inclusive)
 // and a maximum value (exclusive) using a uniform distribution
 // Example gen_uniform(50) should return an integer in range [0, 50)
 int gen_uniform(int max_num) {
-  // TODO (2): WRITE IMPLEMENTATION
+  // TODO (3): WRITE IMPLEMENTATION
   return -1;  // replace this stub
 }
 
@@ -82,6 +85,6 @@ int gen_uniform(int max_num) {
 // 0 and (max_num / n + 1) and add them together to get a normally distributed value
 // between 0..max_num, just being careful about edge cases.
 int normal_rand(int max_num) {
-  // TODO (4): WRITE IMPLEMENTATION
+  // TODO (5): WRITE IMPLEMENTATION
   return -1;  // replace this stub
 }
