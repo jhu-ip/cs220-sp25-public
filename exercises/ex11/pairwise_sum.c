@@ -31,7 +31,7 @@ int *pairwise_sum(int *array, int length) {
         return NULL;
     }
     // do the pairwise sum into "fresh"
-    for (int i = 0; i < length - 1; i++) {
+    for (int i = 0; i < length; i++) {
         fresh[i] = array[i] + array[i+1];
     }
     return fresh;
@@ -54,14 +54,11 @@ int main() {
     print_array(pairsum1, 4);
     free(pairsum1);
 
-    pairsum1 = pairwise_sum(array, 5);
-
-    int *pairsum2 = pairwise_sum(pairsum1, 4);
+    int *pairsum2 = pairwise_sum(pairwise_sum(array, 5), 4);
     if (pairsum2 == NULL) {
         return 1; // error
     }
     print_array(pairsum2, 3);
-    free(pairsum1);
     free(pairsum2);
 
     return 0;
