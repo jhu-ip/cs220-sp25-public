@@ -1,0 +1,4 @@
+1 fish 2 fish red fish blue fish
+5 little monkeys jumping on the bed
+Pi is approximately 3.14159
+The moon is approximately 3.844e2 million miles from the earth
