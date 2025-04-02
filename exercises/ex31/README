@@ -1,0 +1,31 @@
+Exercise 11-2 (builds on code created last class in Exercise 11-1)
+
+In this exercise, you will transform the int_set.h and int_set.cpp files to make them templated.
+
+
+First, rename int_node.h to be my_node.h
+Second, rename int_set.h to be my_set.h
+Next, rename int_set.cpp to be my_set.inc  //note the change to .inc!
+
+Make adjustments to each file so that a templated my_node can be
+used with any base type, and so that my_set can be used
+with any base type that has the operations == and < defined for it.
+(We must have these two defined, since we use them in maintaining
+our sorted linked list, and to be able to avoid duplicates in our sets.)
+
+You can test with main1.
+Also be sure to run valgrind to check for memory leaks and correct any found.
+
+
+Tips:
+1) Don't use my_set<T> inside class definition for my_set (.h) file. You need it at the top of the class, but inside the class, use my_set instead.
+
+2) Since operator<< is a friend rather than a member of the class, it will need
+a different template parameter (e.g., in my_set.h):
+
+template<typename U>
+friend std::ostream& operator<<(std::ostream& os, const my_set<U>& s);
+
+
+3) In my_set.inc, use my_set<T>:: as the prefix for class method definitions.
+

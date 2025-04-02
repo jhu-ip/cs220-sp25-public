@@ -1,0 +1,12 @@
+Write these functions in the int_set.cpp file:
+
+operator<<
+destructor
+copy constructor
+operator+=
+operator=
+
+You can test with main1, but will need to gradually uncomment some sections as
+you have implemented the above functions.
+
+Also be sure to run valgrind to check for memory leaks and correct any found.

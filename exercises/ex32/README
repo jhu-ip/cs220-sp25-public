@@ -1,0 +1,8 @@
+There is no Makefile for this exercise.
+
+To compile, just type:
+
+  g++ -std=c++11 -Wall -Wextra -pedantic main1.cpp -o main
+
+Since the class files are fully defined in the .h files which
+are included in main1, the code gets fully built this way.
