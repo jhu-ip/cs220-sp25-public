@@ -1,0 +1,7 @@
+There is no Makefile for this exercise, assuming that you just inine all the function implementations in the .h files.
+
+To compile, just type:
+
+  g++ -std=c++11 -Wall -Wextra -pedantic main.cpp -o main
+
+You may create Aclass.ccp and Bclass.cpp files to do your implementations, in which case you'll need to add them to your compile command (or create a Makefile).
