@@ -37,7 +37,7 @@ namespace Chess
 		}
 
 		// Returns a character representing the piece type. Characters are:
-    //    Piece     White   Black
+        //      Piece     White   Black
 		//		King:     K       k
 		//		Queen:    Q       q
 		//		Rook:     R       r
@@ -47,16 +47,16 @@ namespace Chess
 		//		Mystery:  M       m
 		virtual char to_ascii() const = 0;
 
-    // Return unicode character representing the piece type. Characters are:
-    //    Piece     White   Black
+        // Return unicode character representing the piece type. Characters are:
+        //      Piece     White   Black
 		//		King:     U+2654  U+265A
 		//		Queen:    U+2655  U+265B
 		//		Rook:     U+2656  U+265C
-    //		Bishop:   U+2657  U+265D
+        //		Bishop:   U+2657  U+265D
 		//		Knight:   U+2658  U+265E
 		//		Pawn:     U+2658  U+265F
 		//		Mystery:  U+2687  U+2689
-    virtual std::string to_unicode() const = 0;
+        virtual std::string to_unicode() const = 0;
 
 	protected:
 		// When a piece is created, its color must be provided as an argument
